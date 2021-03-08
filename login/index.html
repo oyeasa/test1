@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+        <title>Login</title>
+    </head>
+    <body>
+        <header>
+            <div class="topHead">
+                <ul>
+                    <li>Signin</li>
+                    <li onclick="document.getElementById('log-Form').style.display= 'block';">Login</li>
+                </ul>
+            </div>
+        </header>
+        <div class="logForm animate" id="log-Form">
+            <form action="/action_page.php" method="POST">
+                <span onclick="document.getElementById('log-Form').style.display = 'none';" class="close">&times;</span>
+                <label for="user" ><b>User Name</b></label>
+                <input type="text" placeholder="user name" name="user">
+                <label for="psw"><b>Password</b></label>
+                <input type="text" placeholder="Password" name="psw">
+                <label >Remember me <input type="checkbox" name="remember" checked="checked"></label>
+                <button type="submit"><b>Login</b></button>
+                
+                
+                <div class="cancel">
+                    <button type="button" onclick="document.getElementById('log-Form').style.display = 'none'"; class="cancelForm">Cancel</button>
+                    <span class="forgotPass">Forgot <a href="%">password</a></span>
+                </div>
+            </form>
+            
+        </div>
+    <div class="accor">
+        <button class="accorging">Section 1<span class="plus">+</span></button>
+        <div class="txt">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam magni nam repudiandae, laborum vel consectetur suscipit. Autem mollitia modi dolore in possimus, esse, nemo enim illum consequuntur cupiditate cumque iste?
+        </div>
+        <button class="accorging">Section 2<span class="plus">+</span></button>
+        <div class="txt">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam magni nam repudiandae, laborum vel consectetur suscipit. Autem mollitia modi dolore in possimus, esse, nemo enim illum consequuntur cupiditate cumque iste?
+        </div>
+        <button class="accorging">Section 3 <span class="plus">+</span></button>
+        <div class="txt">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam magni nam repudiandae, laborum vel consectetur suscipit. Autem mollitia modi dolore in possimus, esse, nemo enim illum consequuntur cupiditate cumque iste?
+        </div>
+    </div>
+    </body>
+    <script>/*
+        function logFunc() {
+            document.getElementById('log-Form').style.display= "block";
+        }
+
+        function closeForm(){
+            document.getElementById('log-Form').style.display = "none";
+        }
+
+        function cancelForm(){
+            document.getElementById('log-Form').style.display = "none"
+        }
+
+
+        
+*/
+var acc = document.getElementsByClassName("accorging");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+  acc[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var panel = this.nextElementSibling;
+    if (panel.style.maxHeight) {
+      panel.style.maxHeight = null;
+    } else {
+      panel.style.maxHeight = panel.scrollHeight + "px";
+    } 
+  });
+}
+
+       
+    </script>
+</html>

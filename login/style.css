@@ -1,0 +1,141 @@
+* {
+    box-sizing: border-box;
+}
+
+body{padding: 0;margin: 0;}
+
+.topHead {
+    width: 100%;
+    height: 30px;
+    overflow: hidden;
+    background-color: rosybrown;
+}
+
+.topHead ul {
+    text-decoration-style: none;
+    overflow: hidden;
+    margin: 0;
+}
+
+.topHead li {
+    display: inline-block;
+    font-size: 15px;
+    padding: 7.5px 10px 7.5px 5px;
+    cursor: pointer;
+}
+
+.topHead li:hover {
+    background-color: salmon;
+    font-weight: bolder;
+}
+
+.logForm {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.2);
+    top: 30%;
+    left: 30%;
+}
+.close {
+    width: 30px;
+    text-align: center;
+    font-weight: bolder;
+    font-size: 24px;
+    display: block;
+    margin: 1% 5% 1% 4%;
+    cursor: pointer;
+    transition: 0.3s;
+    border-radius: 2px;
+    /*background-color: rgba(200, 0, 0, 0.8);*/
+}
+
+.close:hover {
+    background-color: rgba(0, 0, 0, 0.3);
+    transition: 0.3s;
+}
+
+input[type=text] {
+    width: 90%;
+    height: 30px;
+    margin: 1% 5% 1% 5%;
+    
+}
+
+label {
+    margin-left: 5%;
+}
+
+button {
+    width: 90%;
+    height: 30px;
+    border: none;
+    background-color: rgb(23, 167, 23);
+    margin: 1% 5% 1% 5%;
+}
+
+.cancel {
+    background-color: rgba(0, 0, 0, 0.3);
+
+}
+
+.cancelForm {
+    width: 20%;
+    background-color: rgb(167, 23, 23);
+    cursor: pointer;
+}
+
+.cancel span {
+    float: right;
+    margin: 2% 5% 2% 5%;
+}
+
+.animate {
+    -webkit-animation: animatezoom 0.6s;
+    animation: animatezoom 0.6s;
+}
+
+@-webkit-keyframes animatezoom {
+    from {-webkit-transform: scale(0)} 
+    to {-webkit-transform: scale(1)}
+  }
+
+@keyframes animatezoom {
+    from {transform: scale(0)} 
+    to {transform: scale(1)}
+}
+
+.accor {
+    margin: 1%;
+
+}
+
+.accorging {
+    background-color: rgb(123, 123, 123);
+    width: 100%;
+    margin: 0;
+    text-align: left;
+    transition: 0.4s;
+}
+
+.plus {
+    float: right;
+    font-size: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.plus:hover {
+    color: rgb(250, 250, 250);
+}
+
+
+.txt {
+    max-height: 0;
+    transition: max-height 0.2s ease-out;
+}
+
+.active {
+    background-color: rgb(250, 250, 250);
+}
